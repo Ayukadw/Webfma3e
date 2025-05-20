@@ -14,6 +14,9 @@
 */
 
 $router->group(['prefix' => 'api'], function () use ($router) {
+    
+    $router->post('/login', 'AuthController@login');
+
     // ===== USERS =====
     $router->get('/users', 'UserController@index');
     $router->get('/users/{id}', 'UserController@show');
